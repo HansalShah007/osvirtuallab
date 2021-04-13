@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Virtual Lab</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+  crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="diskscheduling_index.html">
+                <img id="logo" src="images/website_logo1.png" alt="logo">
+                <div class="hover-border">Disk Scheduling</div>
+            </a>
+            <div class="divider"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <div class="hover-border">Home</div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Algorithms
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
+                            <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">Concurrency</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compare.html"><span class="hover-border">Compare</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span class="hover-border">About Developers</span></a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" placeholder="Type to search...">
+                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="block1">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">DISK
+                SCHEDULING
+            </h1>
+        </div>
+        <div class="typing animate__animated animate__slideInUp">
+            <h2 style="margin: 10px; font-weight: 700;">Includes: </h2>
+            <span class="type-writer" style="margin: 10px;" data-wait="2000"
+                data-words='["FCFS", "SSTF", "SCAN", "C-SCAN", "LOOK", "C-LOOK"]'></span>
+        </div>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 style="margin: 0px;">About</h1>
+            </div>
+        </div>
+
+        <div class="infocard" >
+            <div class="infocard-body">
+        <p>A process needs two type of time, CPU time and IO time.</p>
+
+        <p>For I/O,it requests the Operating system to access the disk.</p>
+        
+        <p>Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk.</p>
+            </div>
+        </div>
+
+        <div class="infocard" >
+            <div class="infocard-body">
+        <p style="font-weight: 700;">Disk Scheduling is important because:</p>
+
+        <p>1. Multiple I/O requests may arrive by different processes and only one I/O requests can be served at a time by the disk controller.Thus other I/O requests need to wait in the waiting queue and need to be scheduled.</p>
+
+        <p>2.Two or more request may be far from each other so can result in the greater disk arm movement.</p>
+
+        <p>3.Hard drives need to be acessed in an efficient manner as they are the slowest parts of the computer system.</p>
+            </div>
+        </div>
+    
+        <div class="infocard">
+            <div class="infocard-body">
+        <p style="font-weight: 700;">Some of the important terms:</p>
+
+        <p style="font-weight: 700;">Seek Time:</p><p>Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or write. So the disk scheduling algorithm that gives minimum average seek time is better.</p>
+
+        <p style="font-weight: 700;">Rotational Latency:</p><p>Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads. The disk scheduling algorithm that gives minimum rotational latency is better.</p>
+
+        <p style="font-weight: 700;">Transfer Time:</p><p> Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred.</p>
+
+        <p style="font-weight: 700;">Disk Access Time = Seek Time + Rotational Latency + Tranfer time</p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="mid-blockDSPR">
+        <div class="mid-heading-wrapper">
+        <div class="mid-heading">
+            <h1 class="hover-border">Algorithms</h1>
+        </div>
+        </div>
+
+        <div class="cardsDSPR" style="width: 90%;">
+            <a href="fcfs.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">FCFS</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">Requests are served in the order that they arrive.</p>
+                    </div>
+                    <div class="algo-card-footer">
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="sstf.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">SSTF</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">Request with lowest seek time is executed first.</p>
+                    </div>
+                    <div class="algo-card-footer">
+
+                    </div>
+                </div>
+            </a>
+
+            <a href="scan.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">SCAN</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">All requests arriving in the path are addressed. Head moves till the end
+                            track.
+                        </p>
+                    </div>
+                    <div class="algo-card-footer">
+
+                    </div>
+                </div>
+            </a>
+        <!-- </div>
+
+        <div class="cards" style="margin-top:0px; width: 85%;"> -->
+            <a href="cscan.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">C-SCAN</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">Similar to that of SCAN. Requests are addressed when the head moves in a
+                            single direction.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="look.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">LOOK</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">Similar to SCAN, but the head moves only till the last request.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="clook.html" style="text-decoration: none;">
+                <div class="card text-white bg-dark algo-cards" style="width: 14rem; height: 14rem; margin-left: 40px; margin-right: 40px;">
+                    <div class="algo-heading">C-LOOK</div>
+                    <div class="card-body" style="overflow-y: scroll;">
+                        <p class="card-text">Similar to C-SCAN, but the head moves only till the first and last request.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <div id="foooter">
+
+
+
+        <div class="footer-dark">
+            <footer>
+                <div id="footer-container" class="footercontainer">
+                    <div class="footerflex-1">
+                        <div class="footerrow">
+
+                            <!-- First Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">OS Virtual Lab
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="pagereplcement_index.html">Page Replacement</a></li>
+                                                <li><a href="diskscheduling_index.html">Disk Scheduling</a></li>
+                                                <li><a href="#CpuScheduling">CPU Scheduling</a></li>
+                                                <li><a href="#Concurrency">Concurrency</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Second Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Page Replacement
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fifo.html">FIFO</a></li>
+                                                <li><a href="lifo.html">LIFO</a></li>
+                                                <li><a href="lru.html">LRU</a></li>
+                                                <li><a href="optimal.html">OPTIMAL</a></li>
+                                                <li><a href="random.html">RANDOM</a></li>
+                                                <li><a href="belady.html">BELADY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Third Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Disc Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fcfs.html">FCFS</a></li>
+                                                <li><a href="sstf.html">SSTF</a></li>
+                                                <li><a href="scan.html">SCAN</a></li>
+                                                <li><a href="cscan.html">C-SCAN</a></li>
+                                                <li><a href="look.html">LOOK</a></li>
+                                                <li><a href="clook.html">C-LOOK</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">CPU Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Fifth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Concurrency
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="footerlinks" id="accordion1">
+
+                        <div>
+                            <p> Links to be added</p>
+                        </div>
+
+                    </div>
+                    <p class="copyright">OS Project © Team 15</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+        <script src="js/typewriter.js"></script>
+        <script src="js/search.js"></script>
+
+
+</body>
+
+</html>

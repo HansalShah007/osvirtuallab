@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OS Virtual Lab</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/about.css" type="text/css">
+
+    <!-- Footer -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+
+    <link rel="shortcut icon" type="image/png" href="images/website_logo1.png">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="diskscheduling_index.html">
+                <img id="logo" src="images/website_logo1.png" alt="logo">
+                <div class="hover-border">Disk Scheduling</div>
+            </a>
+            <div class="divider"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <div class="hover-border">Home</div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Algorithms
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
+                            <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">Concurrency</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compare.html"><span class="hover-border">Compare</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span class="hover-border">About Developers</span></a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" placeholder="Type to search...">
+                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="block1">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">About
+                Developers
+            </h1>
+        </div>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
+        </div>
+    </div>
+
+    <div class="team">
+        Team For Disk Scheduling Algorithms
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <!--Card #1  -->
+            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Hansal Shah</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #2  -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Jainil Patel</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #3  -->
+            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Mahida</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #4  -->
+            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Jain</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #5  -->
+            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Rushabh Shah</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="team" style="width: 50vw;">
+        Team For Page Replacement Algorithms
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <!--Card #1  -->
+            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Darshan Patel</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #2  -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Kunal Kataria</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #3  -->
+            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Neel Yadav</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card #4  -->
+            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 13rem;">
+                    <div class="align-items-center text-center">
+                        <img src="images/image.jpeg" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Aashil Shah</h4>
+                        <div style="margin-top: 15px;">
+                            <a href="" style="margin: 15px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <a href="" style="margin: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="foooter">
+        <div class="footer-dark">
+            <footer>
+                <div id="footer-container" class="footercontainer">
+                    <div class="footerflex-1">
+                        <div class="footerrow">
+
+                            <!-- First Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">OS Virtual Lab
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="pagereplcement_index.html">Page Replacement</a></li>
+                                                <li><a href="diskscheduling_index.html">Disk Scheduling</a></li>
+                                                <li><a href="#CpuScheduling">CPU Scheduling</a></li>
+                                                <li><a href="#Concurrency">Concurrency</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Second Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Page Replacement
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fifo.html">FIFO</a></li>
+                                                <li><a href="lifo.html">LIFO</a></li>
+                                                <li><a href="lru.html">LRU</a></li>
+                                                <li><a href="optimal.html">OPTIMAL</a></li>
+                                                <li><a href="random.html">RANDOM</a></li>
+                                                <li><a href="belady.html">BELADY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Third Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Disc Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fcfs.html">FCFS</a></li>
+                                                <li><a href="sstf.html">SSTF</a></li>
+                                                <li><a href="scan.html">SCAN</a></li>
+                                                <li><a href="cscan.html">C-SCAN</a></li>
+                                                <li><a href="look.html">LOOK</a></li>
+                                                <li><a href="clook.html">C-LOOK</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">CPU Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Fifth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Concurrency
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="footerlinks" id="accordion1">
+
+                        <div>
+                            <p> Links to be added</p>
+                        </div>
+
+                    </div>
+                    <p class="copyright">OS Project © Team 15</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/search.js"></script>
+
+</body>
+
+</html>

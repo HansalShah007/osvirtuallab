@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.nav-item, .nav-link, .navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand {
+    font-weight: 700 !important;
+}
+
+.btn-outline-success{
+    color: white;
+    background-color: black;
+    border-color: white;
+    transition: all 0.3s;
+}
+
+
+.btn-outline-success:hover{
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.divider {
+    width: 20px;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    /* border-bottom: 3px solid black; */
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    /* overflow: hidden; */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .1;
+    width: 50%;
+    background: #3e64ff;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    font-weight:700;
+}
+
+
+.mid-heading{
+    position: absolute;
+    top: 70px;
+    
+}
+
+.hover-border::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 1s ease;
+}
+
+.mid-heading:hover {
+    cursor: pointer;
+}
+
+.mid-heading:hover .hover-border::after{
+    left: 0%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.navbar-brand:hover .hover-border::after,
+.nav-item:hover .hover-border::after{
+    width: 100%;
+    left: 0%;
+    cursor: pointer;
+    background-color: red;
+}
+
+.mid-heading h1 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    
+}
+
+.algo_cards {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 50vh;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    border-radius: 2rem;
+    margin: 20px;
+}
+
+.card-title {
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.card {
+    box-shadow: 0 2px 4px 0px gray;
+    height: 15rem;
+    border-radius: 2rem;
+    border: 2px solid gray;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.card:hover .card-title {
+    color: white !important;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px 0 gray;
+    background-color: black;
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.card-title {
+    text-decoration: none !important;
+}

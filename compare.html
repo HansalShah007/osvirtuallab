@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Virtual Lab</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/compare_style.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="diskscheduling_index.html">
+                <img id="logo" src="images/website_logo1.png" alt="logo">
+                <div class="hover-border">Disk Scheduling</div>
+            </a>
+            <div class="divider"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <div class="hover-border">Home</div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Algorithms
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
+                            <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">Concurrency</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span class="hover-border">About Developers</span></a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" placeholder="Type to search...">
+                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="block">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center; ">Compare
+            </h1>
+        </div>
+        <div class="typing animate__animated animate__slideInUp">
+            <span class="type-writer" style="margin: 10px;" data-wait="2000"
+                data-words='["FCFS", "SSTF", "SCAN", "C-SCAN", "LOOK", "C-LOOK"]'></span>
+
+        </div>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
+        </div>
+    </div>
+
+    <div id="compare-first-block">
+
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1>Comparing Algorithms</h1>
+            </div>
+        </div>
+
+        <div id="alert-wrapper"></div>
+
+        <div id="running" class="compare-running-algo">
+
+            <form id="compare-form">
+
+                <div id="compare-controls" class="compare-controls">
+                    <h4 style="margin-bottom: 23px; text-align: center; font-weight: bold;">REQUIRED INFO</h4>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">
+                            <div style="font-size: 1.2rem; font-weight: bolder;">Number Of Requests</div>
+                        </label>
+                        <input type="text" class="form-control glowing-border" id="requests" style="width: 20em;">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">
+                            <div style="font-size: 1.2rem; font-weight: bolder;">Head Position</div>
+                        </label>
+                        <input type="text" class="form-control" id="head" style="width: 20em;" data-bs-toggle="popover"
+                            data-bs-trigger="hover" title="Important!"
+                            data-bs-content="The value of head position should not lie outside the range of track numbers.">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">
+                            <div style="font-size: 1.2rem; font-weight: bolder;">Total Tracks</div>
+                        </label>
+                        <input type="text" class="form-control" id="max-track" style="width: 20em;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputState" class="form-label ">
+                            <div style="font-size: 1.2rem; font-weight: bolder;">Choose Direction</div>
+                        </label>
+                        <select id="direction" class="form-select form1" style="width: 20em;">
+                            <option value="left" class="select">Left</option>
+                            <option value="right" class="select">Right</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">
+                            <div style="font-size: 1.2rem; font-weight: bolder;">Tracks</div>
+                        </label>
+                        <input type="text" class="form-control" id="tracks" style="width: 20em;"
+                            placeholder="Track requests" data-bs-toggle="popover" data-bs-trigger="hover"
+                            title="Important!"
+                            data-bs-content="Make sure that the values of the tracks are either space separated or comma separated. There should not be any comma before the first track value and after the last track value. Any track request should not exceed the maximum possible track number.">
+                    </div>
+
+                </div>
+
+                <div class="select-algos">
+                    <h4 style="margin: 10px; text-align: center; font-weight: bold;">ALGORITHMS TO COMPARE</h4>
+                    <div class="list-group" style="margin: 10px; width: fit-content;">
+
+                        <label class="list-group-item" style="border-radius: 7px;">
+                            <input class="form-check-input me-1" type="checkbox" id="fcfs">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> First Come First
+                                Serve</div>
+
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="sstf">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> Shortest Seek
+                                Time First</div>
+                        </label>
+
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="scan">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> SCAN</div>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="cscan">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> Circular-SCAN
+                            </div>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="look">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> LOOK</div>
+                        </label>
+                        <label class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" id="clook">
+                            <div style="font-size: 1.2rem; font-weight: bolder; margin-left: 0.5rem;"> Circular-LOOK
+                            </div>
+                        </label>
+                    </div>
+                    <div class="compare-buttons">
+                        <input id="reset-button" type="reset" class="btn btn-dark form-control last_button"
+                            style="margin: 10px;">
+                        <button id="compare" type="button" class="btn btn-dark last_button disabled"
+                            data-bs-toggle="popover" data-bs-trigger="hover" title="Warning!"
+                            data-bs-content="None of the fields above should be empty. They should not contain any alphabetic or special character!"
+                            style="margin: 10px;">Compare</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="compare-line-chart">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 id="text">Graphs Of Selected Algorithms</h1>
+            </div>
+        </div>
+
+        <div id="line-chart-wrapper">
+            <div id="image" class="compare-chart-display chart-display">
+                <div id="chart-container" class="show-element" style="width: 100%; height: 100%;">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                        style="width: 100%; height: 100%;">
+
+                        <div id="cinner" class="carousel-inner">
+
+                            <div id="fcfsCarousel" class="carousel-item active" data-bs-interval="10000" ">
+                            <div class=" chartres">
+                                <canvas id="fcfschart"></canvas>
+                            </div>
+
+                            <div id="fcfsseek" class="seek" style="width: 100%; height: 10%; text-align: center;">
+                                <h4 id="fcfstemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                        <div id="sstfCarousel" class="carousel-item" data-bs-interval="10000">
+                            <div class="chartres">
+                                <canvas id="sstfchart"></canvas>
+                            </div>
+
+                            <div id="sstfseek" class="seek" style="width: 100%; height: 10%; text-align: center; ">
+                                <h4 id="sstftemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                        <div id="clookCarousel" class="carousel-item" data-bs-interval="10000">
+                            <div class="chartres">
+                                <canvas id="clookchart"></canvas>
+                            </div>
+
+                            <div id="clookseek" class="seek" style="width: 100%; height: 10%; text-align: center;">
+                                <h4 id="clooktemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                        <div id="cscanCarousel" class="carousel-item" data-bs-interval="10000">
+                            <div class="chartres">
+                                <canvas id="cscanchart"></canvas>
+                            </div>
+
+                            <div id="cscanseek" class="seek" style="width: 100%; height: 10%; text-align: center;">
+                                <h4 id="cscantemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                        <div id="lookCarousel" class="carousel-item" data-bs-interval="10000">
+                            <div class="chartres">
+                                <canvas id="lookchart"></canvas>
+                            </div>
+
+                            <div id="lookseek" class="seek" style="width: 100%; height: 10%; text-align: center;">
+                                <h4 id="looktemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                        <div id="scanCarousel" class="carousel-item" data-bs-interval="10000">
+                            <div class="chartres">
+                                <canvas id="scanchart"></canvas>
+                            </div>
+
+                            <div id="scanseek" class="seek" style="width: 100%; height: 10%; text-align: center;">
+                                <h4 id="scantemp" class="temp"> </h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="cindicators" class="carousel-indicators" style="margin-top: 10px; position: relative;">
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-label="Slide 1"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2" class=""></button>
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3" class="" aria-current="true"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                            aria-label="Slide 4" class="" aria-current="true"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                            aria-label="Slide 5" class="" aria-current="true"></button>
+
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                            aria-label="Slide 6" class="" aria-current="true"></button>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="compare-bar-chart" style="border-top: 2px solid black;">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1>Comparing Seek Operations</h1>
+            </div>
+        </div>
+        <div id="bar-chart-wrapper">
+            <div id='barchart-container' class="chart-display bar-chart-display" style="height: fit-content;">
+                <div style="width: 100%; height: 100%;">
+                    <div class="chartres">
+                        <canvas id="barchart"></canvas>
+                    </div>
+                    <div id="download-buttons">
+                        <h4 class="animate__animated animate__backInUp" style="height: 100%;"><b>Download Chart</b></h1>
+                            <div id="dImageIcon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="foooter">
+        <div class="footer-dark">
+            <footer>
+                <div id="footer-container" class="footercontainer">
+                    <div class="footerflex-1">
+                        <div class="footerrow">
+
+                            <!-- First Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">OS Virtual Lab
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="pagereplcement_index.html">Page Replacement</a></li>
+                                                <li><a href="diskscheduling_index.html">Disk Scheduling</a></li>
+                                                <li><a href="#CpuScheduling">CPU Scheduling</a></li>
+                                                <li><a href="#Concurrency">Concurrency</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Second Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Page Replacement
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fifo.html">FIFO</a></li>
+                                                <li><a href="lifo.html">LIFO</a></li>
+                                                <li><a href="lru.html">LRU</a></li>
+                                                <li><a href="optimal.html">OPTIMAL</a></li>
+                                                <li><a href="random.html">RANDOM</a></li>
+                                                <li><a href="belady.html">BELADY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Third Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Disc Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fcfs.html">FCFS</a></li>
+                                                <li><a href="sstf.html">SSTF</a></li>
+                                                <li><a href="scan.html">SCAN</a></li>
+                                                <li><a href="cscan.html">C-SCAN</a></li>
+                                                <li><a href="look.html">LOOK</a></li>
+                                                <li><a href="clook.html">C-LOOK</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">CPU Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Fifth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Concurrency
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="footerlinks" id="accordion1">
+
+                        <div>
+                            <p> Links to be added</p>
+                        </div>
+
+                    </div>
+                    <p class="copyright">OS Project © Team 15</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/typewriter.js"></script>
+
+</body>
+
+</html>

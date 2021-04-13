@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Virtual Lab</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Footer -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="diskscheduling_index.html">
+                <img id="logo" src="images/website_logo1.png" alt="logo">
+                <div class="hover-border">Disk Scheduling</div>
+            </a>
+            <div class="divider"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <div class="hover-border">Home</div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Algorithms
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
+                            <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
+                            <li><a class="dropdown-item" href="#">Concurrency</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compare.html"><span class="hover-border">Compare</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span class="hover-border">About Developers</span></a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" placeholder="Type to search...">
+                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="block">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">C-LOOK
+            </h1>
+        </div>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
+        </div>
+    </div>
+
+    <div class="mid-block">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">About</h1>
+            </div>
+        </div>
+
+        <div class="mid-cards">
+            <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
+                <div class="card-header" style="font-size: 2rem;">C LOOK</div>
+                <div class="card-body" style="overflow-y: scroll;">
+                    <p class="card-text">C-LOOK is an enhanced version of both SCAN as well as LOOK disk scheduling
+                        algorithms. This algorithm also uses the idea of wrapping the tracks as a circular cylinder as
+                        C-SCAN algorithm but the seek time is better than C-SCAN algorithm.<br><br> We know that C-SCAN
+                        is used
+                        to avoid starvation and services all the requests more uniformly, the same goes for C-LOOK.
+                        In this algorithm, the head services requests only in one direction (either left or right) until
+                        all the requests in this direction are not serviced and then jumps back to the farthest request
+                        on the other direction and service the remaining requests which gives a better uniform servicing
+                        as well as avoids wasting seek time for going till the end of the disk </p><br>
+                    <div class="card-header bg-dark" style="font-size: 1.5rem; padding: 0; border: 0;">Advantages</div>
+                    <p class="card-text">
+                    <ol>
+                        <li>
+                            There is no starvation in C-look disk scheduling.
+                        </li><br>
+                        <li>
+                            The performance of the C-Look scheduling is better than Look disk scheduling.
+                        </li><br>
+                        <li>
+                            C-look disk scheduling offers low variance in waiting time and response time.
+                        </li><br>
+                    </ol>
+                    </p>
+                    <div class="card-header bg-dark" style="font-size: 1.5rem; padding: 0; border: 0;">Disadvantages
+                    </div>
+                    <p class="card-text">
+                    <ol>
+                        <li>
+                            In C-Look disk scheduling there may be more overhead to determine the end request.
+                        </li><br>
+                        <li>
+                            There is more overhead in calculations.
+                        </li><br>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+            <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
+                <div class="card-header" style="font-size: 2rem;">Algorithm</div>
+                <div class="card-body" style="overflow-y: scroll;">
+                    <p class="card-text">
+                    <ol>
+                        <li>Let Request array represents an array storing indexes of the tracks that have been requested
+                            in ascending order of their time of arrival and head is the position of the disk head.
+                        </li><br>
+                        <li>
+                            The initial direction in which the head is moving is given and it services in the same
+                            direction.
+                        </li><br>
+                        <li>
+                            The head services all the requests one by one in the direction it is moving.
+                        </li><br>
+                        <li>
+                            The head continues to move in the same direction until all the requests in this direction
+                            have been serviced.
+                        </li><br>
+                        <li>
+                            While moving in this direction, calculate the absolute distance of the tracks from the head.
+                        </li><br>
+                        <li>
+                            Increment the total seek count with this distance.
+                        </li><br>
+                        <li>
+                            Currently serviced track position now becomes the new head position.
+                        </li><br>
+                        <li>
+                            Go to step 5 until we reach the last request in this direction.
+                        </li><br>
+                        <li>
+                            If we reach the last request in the current direction then reverse the direction and move
+                            the head in this direction until we reach the last request that is needed to be serviced in
+                            this direction without servicing the intermediate requests.
+                        </li><br>
+                        <li>
+                            Reverse the direction and go to step 3 until all the requests have not been serviced.
+                        </li><br>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="last-block">
+
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">Implementation</h1>
+            </div>
+        </div>
+
+        <div id="alert-wrapper"></div>
+
+        <div class="running-algo">
+            <form>
+                <div id="controls">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Number Of Requests</label>
+                        <input type="number" class="form-control glowing-border" id="requests">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Total Tracks</label>
+                        <input type="number" class="form-control" id="max-track" placeholder="Maximum track number">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Head Position</label>
+                        <input type="number" class="form-control" id="head" data-bs-toggle="popover"
+                            data-bs-trigger="hover" title="Important!"
+                            data-bs-content="The value of head position should not lie outside the range of track numbers.">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputState" class="form-label">Choose Direction</label>
+                        <select id="direction" class="form-select form-control" style="width: 228px;">
+                            <option value="left" class="select">Left</option>
+                            <option value="right" class="select">Right</option>
+                        </select>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Tracks</label>
+                        <input type="text" class="form-control" id="tracks" placeholder="Track requests"
+                            data-bs-toggle="popover" data-bs-trigger="hover" title="Important!"
+                            data-bs-content="Make sure that the values of the tracks are either space separated or comma separated. There should not be any comma before the first track value and after the last track value. Any track request should not exceed the maximum possible track number.">
+                    </div>
+
+                    <div class="algo-buttons">
+                        <input id="reset-button" type="reset" class="btn btn-dark form-control last_button"
+                            style="margin: 10px;">
+                        <button id="run" type="button" class="btn btn-dark last_button disabled"
+                            data-bs-toggle="popover" data-bs-trigger="hover" title="Warning!"
+                            data-bs-content="None of the fields above should be empty. They should not contain any alphabetic or special character!"
+                            style="margin: 10px;">Run</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class='chart-wrapper'>
+                <div id="image" class="chart-display">
+                    <div class="show-element" id="chart-image">
+                        CHART WILL APPEAR HERE
+                    </div>
+                    <div id="chart-container" class="show-element">
+                        <div class="chartres">
+                            <canvas id="chart"></canvas>
+                        </div>
+
+                        <div id="seekShow">
+                            <div id="seek" style="width: 80%; height: 10%; text-align: center;">
+                                <h4 id="temp"> </h4>
+                            </div>
+                            <div id="download-buttons">
+                                <div id="dImageIcon"></div>
+                                <div id="dPDFIcon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <div id="foooter">
+
+
+
+        <div class="footer-dark">
+            <footer>
+                <div id="footer-container" class="footercontainer">
+                    <div class="footerflex-1">
+                        <div class="footerrow">
+
+                            <!-- First Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">OS Virtual Lab
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="pagereplcement_index.html">Page Replacement</a></li>
+                                                <li><a href="diskscheduling_index.html">Disk Scheduling</a></li>
+                                                <li><a href="#CpuScheduling">CPU Scheduling</a></li>
+                                                <li><a href="#Concurrency">Concurrency</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Second Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Page Replacement
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fifo.html">FIFO</a></li>
+                                                <li><a href="lifo.html">LIFO</a></li>
+                                                <li><a href="lru.html">LRU</a></li>
+                                                <li><a href="optimal.html">OPTIMAL</a></li>
+                                                <li><a href="random.html">RANDOM</a></li>
+                                                <li><a href="belady.html">BELADY</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Third Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Disc Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href="fcfs.html">FCFS</a></li>
+                                                <li><a href="sstf.html">SSTF</a></li>
+                                                <li><a href="scan.html">SCAN</a></li>
+                                                <li><a href="cscan.html">C-SCAN</a></li>
+                                                <li><a href="look.html">LOOK</a></li>
+                                                <li><a href="clook.html">C-LOOK</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">CPU Scheduling
+
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Fifth Panel -->
+                            <div class="footerpanel-group" id="accordion">
+                                <div class="panel panel-default" id="footerpanel">
+                                    <div class="footerpanel-heading">
+                                        <h4 class="footerpanel-title accordion-button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne,#collapseTwo,#collapseThree,#collapseFour,#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseOne">Concurrency
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="footercontent">
+                                            <ul style="list-style-type: none;">
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+                                                <li><a href=""></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="footerlinks" id="accordion1">
+
+                        <div>
+                            <p> Links to be added</p>
+                        </div>
+
+                    </div>
+                    <p class="copyright">OS Project © Team 15</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="js/clook.js"></script>
+
+</body>
+
+</html>
