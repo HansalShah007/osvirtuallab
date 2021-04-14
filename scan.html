@@ -247,7 +247,7 @@
             
             <div class='chart-wrapper'>
                 <div id="image" class="chart-display">
-                    <div class="show-element" id="chart-image" >
+                    <div class="show-element" id="chart-image">
                         CHART WILL APPEAR HERE
                     </div>
                     <div id="chart-container" class="show-element">
@@ -256,9 +256,12 @@
                         </div>
 
                         <div id="seekShow">
-                            <div id="seek" style="width: 80%; height: 10%; text-align: center;">
+                            <div id="seek" style="width: 80%; height: 10%; text-align: center;"
+                                data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="click"
+                                title="Important!" data-bs-content="Considering the successive track seek time as 1ms.">
                                 <h4 id="temp"> </h4>
-                            </div>
+                                <h4 id="temp1"> </h4>
+                        </div>
                             <div id="download-buttons">
                                 <div id="dImageIcon"></div>
                                 <div id="dPDFIcon"></div>
