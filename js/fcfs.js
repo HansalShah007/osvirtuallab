@@ -6,7 +6,7 @@
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
+    return new bootstrap.Popover(popoverTriggerEl);
 });
 
 var alertList = document.querySelectorAll('.alert')
@@ -269,26 +269,31 @@ function execute() {
                 var calc = doc.splitTextToSize(seekCalc, 180);
                 doc.text(calc, 20, 107);
                 doc.setFont("Times", "bold");
-                doc.text('Thus, total seek operations = ' + String(seekOperations(trackRequests, head)), 20, 121);
+                // ChangeCommit
+                doc.text('Thus, total seek time = ' + String(seekOperations(trackRequests, head))+'ms (Considering successive track seek time as 1ms)', 20, 121);
+                var seekTime = 'Average Seek Time = '+String(Math.round((xrange/3)*100)/100)+'ms (Time taken by the header to move across one third of total tracks)';
+                seekTime = doc.splitTextToSize(seekTime, 180);
+                doc.text(seekTime, 20, 131);
+
+                var note = 'If your disk takes "x" amount of time (in milliseconds) to seek across successive tracks, then multiply the above results by "x" to get the correct results';
+                note = doc.splitTextToSize(note, 180);
+                doc.text(note, 20, 144);
 
                 // TRACK SERVICING CHART
-                doc.setFont("Times", "bold");
-                doc.setFontSize(14);
-                doc.text('Chart', 10, 141);
                 let factorw = imgw / doc.internal.pageSize.width;
                 let factorh = imgh / ((doc.internal.pageSize.height / 2) - 15);
 
                 let xshift;
                 if (factorw > factorh && factorw > 1) {
                     xshift = (doc.internal.pageSize.width - ((imgw / factorw) - 10)) / 2;
-                    doc.addImage(ImageURL, 'PNG', xshift, 151, (imgw / factorw) - 10, (imgh / factorw));
+                    doc.addImage(ImageURL, 'PNG', xshift, 158, (imgw / factorw) - 10, (imgh / factorw));
                 }
                 else if (factorh > factorw && factorh > 1) {
                     xshift = (doc.internal.pageSize.width - ((imgw / factorh) - 10)) / 2;
-                    doc.addImage(ImageURL, 'PNG', xshift, 151, (imgw / factorh) - 10, (imgh / factorh));
+                    doc.addImage(ImageURL, 'PNG', xshift, 158, (imgw / factorh) - 10, (imgh / factorh));
                 }
                 else {
-                    doc.addImage(ImageURL, 'PNG', 7, 146, (imgw) - 10, (imgh));
+                    doc.addImage(ImageURL, 'PNG', 7, 158, (imgw) - 10, (imgh));
                 }
 
                 // FINALLY SAVING THE PDF 
@@ -406,9 +411,10 @@ function execute() {
             }
         });
 
-        function displaySeekOp() {
+        function displaySeekOp() { //ChangeCommit
             let temp = document.getElementById('temp');
-            temp.remove();
+            let temp1 = document.getElementById('temp1');
+            temp.remove(); temp1.remove();
 
             let url = document.getElementById("url");
             url.remove();
@@ -416,15 +422,23 @@ function execute() {
             let genPDF = document.getElementById("genPDF");
             genPDF.remove();
 
-            document.getElementById('seek').style.width = '50%'; // to be added to other js files
+            document.getElementById('seek').style.width = 'fit-content'; // to be added to other js files
+            // document.getElementById('seek').style.flexDirection = 'column';
+            var seekOp1 = document.createElement('h4');
+            seekOp1.id = 'temp';
+            seekOp1.style.fontWeight = "700"; seekOp1.style.margin = "5px";
+            str = 'Total Seek Time: ' + seekOperations(trackRequests, head) + ' ms';
+            seekOp1.append(document.createTextNode(str));
+            seekOp1.classList.add("animate__animated"); seekOp1.classList.add("animate__backInUp");
+            document.getElementById('seek').append(seekOp1);
 
-            var seekOp = document.createElement('h4');
-            seekOp.id = 'temp';
-            seekOp.style.fontWeight = "700";
-            str = 'Total Seek Operations: ' + seekOperations(trackRequests, head);
-            seekOp.append(document.createTextNode(str));
-            seekOp.classList.add("animate__animated"); seekOp.classList.add("animate__backInUp");
-            document.getElementById('seek').append(seekOp);
+            var seekOp2 = document.createElement('h4');
+            seekOp2.id = 'temp1';
+            seekOp2.style.fontWeight = "700"; seekOp2.style.margin = "5px";
+            str = 'Average Seek Time: ' + Math.round((xrange/3)*100)/100 + ' ms';
+            seekOp2.append(document.createTextNode(str));
+            seekOp2.classList.add("animate__animated"); seekOp2.classList.add("animate__backInUp");
+            document.getElementById('seek').append(seekOp2);
 
             var dIcon = document.createElement("a");
             dIcon.id = 'url'; dIcon.download = "FCFS.jpeg";
@@ -440,7 +454,6 @@ function execute() {
             dIcon.append(dButton);
             document.getElementById('dImageIcon').append(dIcon);
 
-            // NEW CODE TO BE ADDED IN OTHER JS FILES 
             var pdfButton = document.createElement("button");
             pdfButton.type = 'button'; pdfButton.className = 'pdfButton btn btn-outline-dark animate__animated animate__backInUp';
             pdfButton.style.padding = '0'; pdfButton.id = "genPDF"
@@ -484,7 +497,7 @@ function execute() {
                 progressBarContainer.classList.toggle("animate__backOutDown");
                 setTimeout(function () {
                     progressBarContainer.style.display = "none";
-                    progressWrapper.innerHTML = `<h4 id="temp"> </h4>`;
+                    progressWrapper.innerHTML = `<h4 id="temp"> </h4> <h4 id="temp1"> </h4>`; //ChangeCommit
                     run.classList.toggle("disabled");
                     displaySeekOp();
                     done();
@@ -495,20 +508,6 @@ function execute() {
     }
 }
 run.addEventListener("click", execute);
-
-// window.addEventListener('wheel', (e) => {
-//     console.log(String(window.width));
-//     if(e.deltaY>0){
-//         if(window.pageYOffset>=50 && window.pageYOffset<652.6666870117188){
-//             window.scrollBy(0, 652.6666870117188 - window.pageYOffset);
-//         }
-//         if(window.pageYOffset>=778.6666870117188 && window.pageYOffset< 1256.6666259765625){
-//             window.scrollBy(0, 1256.6666259765625 - window.pageYOffset);
-//         }
-//     }
-// });
-
-
 
 window.addEventListener('wheel', (e) => {
     if (e.deltaY > 0) {

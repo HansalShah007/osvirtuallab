@@ -1,5 +1,6 @@
 * {
     font-family: 'Roboto Slab', serif;
+    
 }
 
 body {
@@ -7,8 +8,9 @@ body {
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
+    width: 100vw;
     overflow-x: hidden;
-    /* width: fit-content; */
+    
 }
 
 /* Navigation Bar */
@@ -100,7 +102,7 @@ body {
     flex-direction: column;
     min-height: 150px;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     /* border-bottom: 2px solid black; */
@@ -156,17 +158,35 @@ body {
 
 /* Teams */
 
-.team {
-    margin-top: 50px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 0px;
+}
+
+.title {
     font-size: 2.5vw;
     font-weight: 600;
-    padding: 5px;
-    margin-left: 10px;
+    width: 50%;
     border-bottom: 2px solid crimson;
     border-left: 10px solid crimson;
     box-shadow: 0 10px 10px 0 #d4d4d5;
-    width: 50vw;    
+    padding: 5px;
 }
+
+.team {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 100%;    
+}
+
+
 
 .round {
     border-radius: 100%;
@@ -180,21 +200,30 @@ a {
 }
 
 .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 25px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px){
     .col-md-4 {
-    flex: 0 0 auto;
-    width: 50%;
+        width: 50%;
     }
 }
 
 @media only screen and (max-width: 578px){
     .col-md-4 {
         width: 100%;
-        margin-left: 30%;
-        margin-right: 30%;
     }
 }
 
@@ -205,7 +234,6 @@ a {
     transition: transform .3s;
     /* border: 1px solid black; */
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-
 }
 
 .card:hover {
@@ -226,7 +254,7 @@ a {
   .footer-dark {
     
       padding:0px 0px;
-      width: 100vw;
+      width: 100%;
       color:#f0f9ff;
       background-color:#282d32;
       padding-bottom:20px;
@@ -261,7 +289,7 @@ a {
   
   .footerflex-1 {
           display:flex;
-           justify-content: center;
+          justify-content: center;
           align-items: center;
           width: 100%;
           
