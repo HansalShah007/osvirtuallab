@@ -26,7 +26,7 @@ TypeWriter.prototype.type = function() {
     }
 
     // Insert txt into element 
-    this.txtElement.innerHTML = `<h2 class="txt" style="color: red; font-weight:200%; margin: 0px;">${this.txt}</h2>`;
+    this.txtElement.innerHTML = `<h2 class="txt" style="color: red; font-weight:200%; margin: 0px; border-right: 2px solid black;">${this.txt}</h2>`;
     
     // Initial Type Speed
     let typeSpeed = 150;

@@ -805,6 +805,7 @@ box-shadow: 0 0 10px black;
         border-bottom: none;
         background-color: black;
         color: white;
+        padding: 5px;
     }
     
     .txt {
@@ -958,6 +959,7 @@ box-shadow: 0 0 10px black;
         border-bottom: none;
         background-color: black;
         color: white;
+        padding: 5px;
     }
 
     .txt {
