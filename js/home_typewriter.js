@@ -58,7 +58,6 @@ TypeWriter.prototype.type = function() {
 
 document.addEventListener('DOMContentLoaded', init);
 
-// Init App
 function init() {
     const txtElement = document.querySelector('.type-writer');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
