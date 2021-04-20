@@ -12,11 +12,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/about.css" type="text/css">
 
+    <!-- Footer -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/about.css">
+
+
     <link rel="shortcut icon" type="image/png" href="images/website_logo1.png">
 </head>
 
@@ -47,20 +51,21 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Algorithms
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
                             <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
                             <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
                             <li><a class="dropdown-item" href="#">Concurrency</a></li>
                         </ul>
                     </li>
+
                 </ul>
 
                 <div class="d-flex">
                     <div class="dropdown">
                         <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false" placeholder="Type to search...">
-                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <ul id="suggestions" class="dropdown-menu dropdown-menu-dark" aria-labelledby="search-button"></ul>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
                             <path
@@ -72,41 +77,54 @@
         </div>
     </nav>
 
-    <div class="block1">
-        <div class="overlay"></div>
-        <div class="heading">
-            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">About
-                Developers
-            </h1>
+    <section>
+        <div class="container1">
+            <img src="images/about_bg.jpg" style="width: 100vw; height: 100vh;" class="img1" alt="image"/>
+            <div class="text1">
+                <h1 class="t1 hover-border">About Developers</h1> <br><br>
+                <p class="t2">
+                    <b>This OS Virtual Lab Website is made by PDEU students.
+                        Each module is developed by a different team. Uptil now two modules i.e. Page Replacement
+                        Algorithms
+                        and Disk Scheduling Algorithms have been developed.</b>
+                </p>
+                <p>
+                <h5><b>Technologies Used:</b></h5>
+                </p>
+                <div class="buttons1">
+                    <button type="button" class="btn btn-dark">HTML</button>
+                    <button type="button" class="btn btn-dark">CSS</button>
+                    <button type="button" class="btn btn-dark">JavaScript</button>
+                    <button type="button" class="btn btn-dark">Bootstrap</button>
+                </div>
+                </p>
+            </div>
         </div>
-        <div class="arrow-box">
-            <img src="images/down_arrow.png" alt="Downward Arrow">
-        </div>
-    </div>
+    </section>
 
     <div class="team">
-        <div class="title">
-            Team For Disk Scheduling Algorithms
-        </div>
+        Team For Disk Scheduling Algorithms
     </div>
 
     <div class="container mb-5 mt-5">
         <div class="row">
             <!--Card #1  -->
-            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
-                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Hansal Shah</h4>
+                        <img src="images/HS.png" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Hansal Shah
+                            <br><br>
+                        </h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/HansalShah007" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="http://linkedin.com/in/hansalms" target="_blank" style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -119,20 +137,23 @@
             </div>
 
             <!--Card #2  -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
-                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Jainil Patel</h4>
+                        <img src="images/JP.png" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Jainil Patel
+                            <br><br>
+                        </h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/Jainil102" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/jainil-patel-453a071aa/" target="_blank"
+                                style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -145,20 +166,22 @@
             </div>
 
             <!--Card #3  -->
-            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
-                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Mahida</h4>
+                        <img src="images/DM.png" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Mahida
+                        </h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/DivyanshMahida127 " target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/divyansh-mahida-77670a1b7" target="_blank"
+                                style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -171,20 +194,22 @@
             </div>
 
             <!--Card #4  -->
-            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
-                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Jain</h4>
+                        <img src="images/DJ.png" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Divyansh Jain
+                            <br><br>
+                        </h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/DivyanshJain92" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/DivyanshJain92/" target="_blank" style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -197,20 +222,23 @@
             </div>
 
             <!--Card #5  -->
-            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
-                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Rushabh Shah</h4>
+                        <img src="images/RS.png" class="round" width="160">
+                        <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Rushabh Shah
+                            <br><br>
+                        </h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/rushabhshah07" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/rushabh-shah-5a1a7018b/" target="_blank"
+                                style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -227,28 +255,26 @@
     <br><br>
 
     <div class="team">
-        <div class="title">
-            Team For Page Replacement Algorithms
-        </div>
+        Team For Page Replacement Algorithms
     </div>
 
     <div class="container mb-5 mt-5">
         <div class="row">
             <!--Card #1  -->
-            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
                         <img src="images/image.jpeg" class="round" width="160">
                         <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Darshan Patel</h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="" target="_blank" style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -261,20 +287,21 @@
             </div>
 
             <!--Card #2  -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
+                        <img src="images/KK.png" class="round" width="160">
                         <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Kunal Kataria</h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/kkataria3010" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/kunal-k-76421b136/" target="_blank"
+                                style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -287,20 +314,21 @@
             </div>
 
             <!--Card #3  -->
-            <div class="col-md-4" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
+                        <img src="images/NY.png" class="round" width="160">
                         <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Neel Yadav</h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/neelriteshyadav" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/neelriteshyadav/
+                            " target="_blank" style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -313,20 +341,21 @@
             </div>
 
             <!--Card #4  -->
-            <div class="col-md-4" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                <div class="card mt-3 h-100" style="width: 13rem;">
+            <div class="col-md-3" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                <div class="card mt-3 h-100" style="width: 11.5rem; height: 18rem;">
                     <div class="align-items-center text-center">
-                        <img src="images/image.jpeg" class="round" width="160">
+                        <img src="images/AS.png" class="round" width="160">
                         <h4 class="card-title fw-bold fw-bold fw-bold" style="margin-top: 20px;">Aashil Shah</h4>
                         <div style="margin-top: 15px;">
-                            <a href="" style="margin: 15px;">
+                            <a href="https://github.com/Aashil0828" target="_blank" style="margin: 15px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-github" viewBox="0 0 16 16">
                                     <path
                                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                 </svg>
                             </a>
-                            <a href="" style="margin: 10px;">
+                            <a href="https://www.linkedin.com/in/aashil-shah-8360a0210" target="_blank"
+                                style="margin: 10px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -337,8 +366,12 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+
+
+
 
     <div id="foooter">
         <div class="footer-dark">
@@ -362,7 +395,7 @@
                                         <div class="footercontent">
                                             <ul style="list-style-type: none;">
                                                 <li><a href="index.html">Home</a></li>
-                                                <li><a href="#about">About Us</a></li>
+                                                <li><a href="about.html">About Us</a></li>
                                                 <li><a href="pagereplcement_index.html">Page Replacement</a></li>
                                                 <li><a href="diskscheduling_index.html">Disk Scheduling</a></li>
                                                 <li><a href="#CpuScheduling">CPU Scheduling</a></li>
@@ -488,18 +521,17 @@
 
                         </div>
                     </div>
-                    <div class="footerlinks" id="accordion1">
-
-                        <div>
-                            <p> Links to be added</p>
-                        </div>
-
+                    <div style="padding-top: 10px;">
+                        <span><a href="https://github.com/HansalShah007/osvirtuallab" target="_blank">Source
+                                Code</a></span>
+                        <span style="margin-left: 50px; margin-right: 50px;">|</span>
+                        <span class="copyright">OS Project © Team 15</span>
                     </div>
-                    <p class="copyright">OS Project © Team 15</p>
                 </div>
             </footer>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

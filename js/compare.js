@@ -1982,7 +1982,7 @@ function bar(labelBar) {
             labels: labelBar,
             datasets: [
                 {
-                    label: 'Seek Operations',
+                    label: 'Seek Time',
                     backgroundColor: ["rgba(255, 102, 102, 0.4)", "rgba(102, 255, 255, 0.4)", "rgba(204, 102, 255, 0.4)", "rgba(255, 204, 153, 0.4)", "rgba(255, 255, 153, 0.4)", "rgba(153, 255, 153, 0.4)"],
                     borderColor: ['rgba(255, 102, 102, 1)', 'rgba(102, 255, 255, 1)', 'rgba(204, 102, 255, 1)', 'rgba(255, 204, 153, 1)', 'rgba(255, 255, 153, 1)', 'rgba(153, 255, 153, 1)'],
                     borderWidth: 2,
@@ -2005,7 +2005,7 @@ function bar(labelBar) {
                             fontSize: 12,
                             fontStyle: 'bold',
                             fontColor: 'black',
-                            labelString: 'TOTAL SEEK OPERATIONS'
+                            labelString: 'TOTAL SEEK TIME (ms)'
                         },
                     }
                 ],
