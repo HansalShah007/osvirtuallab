@@ -29,9 +29,9 @@
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="pagereplacement_index.html">
+            <a class="navbar-brand" href="diskscheduling_index.html">
                 <img id="logo" src="images/website_logo1.png" alt="logo">
-                <div class="hover-border">Page Replacement</div>
+                <div class="hover-border">Disk Scheduling</div>
             </a>
             <div class="divider"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,12 +52,15 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Algorithms
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="pagereplacement_index.html">Page Replacement</a></li>
                             <li><a class="dropdown-item" href="diskscheduling_index.html">Disk Scheduling</a></li>
                             <li><a class="dropdown-item" href="#">CPU Scheduling</a></li>
                             <li><a class="dropdown-item" href="#">Concurrency</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compare.html"><span class="hover-border">Compare</span></a>
                     </li>
 
                     <li class="nav-item">
@@ -70,7 +73,7 @@
                     <div class="dropdown">
                         <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false" placeholder="Type to search...">
-                        <ul id="suggestions" class="dropdown-menu" aria-labelledby="search-button"></ul>
+                        <ul id="suggestions" class="dropdown-menu dropdown-menu-dark" aria-labelledby="search-button"></ul>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
                             <path
@@ -95,8 +98,10 @@
     </div>
 
     <div class="mid-block">
-        <div class="mid-heading">
-            <h1 class="hover-border">About</h1>
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">About</h1>
+            </div>
         </div>
         <div class="mid-cards">
             <div class="card text-white bg-dark mb-3" style="max-width: 28rem; height: 65vh;">
@@ -128,25 +133,33 @@
     </div>
 
     <div class="last-block">
-        <div class="mid-heading">
-            <h1 class="hover-border">Implementation</h1>
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">Implementation</h1>
+            </div>
         </div>
         <div class="divider" style="height: 10vh;"></div>
         <div id="algo">
-            <div class="container" style="width: 85vw; margin-bottom: 10px;">
-                <strong>Reference String:</strong>
-                <input class="input" type="text" style="width: 55%;" id="input">
-                <strong>Frames:</strong> <input class="input" type="number" id="frames" style="width: 10%;" min=1
-                    max=10>
-                <button class="input" id="submit" style="width: 10%;">Submit</button>
-                <div>
-                    <br>
-                    <div id="chartContainer"></div>
-                    <table id="table" class="container text-center">
-                    </table>
-                    <br>
-                    <div id="summary" class="d-flex justify-content-around font-weight-bold text-uppercase"> </div>
+            <div class="container" style="width: 85vw; height: fit-content; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <div style="margin: 10px; width: fit-content; display: flex; justify-content: center; align-items: center;" >
+                        <strong>Reference String:</strong>
+                        <input class="input" type="text" style="width: 55%; min-width: 225px; margin: 5px;" id="input">
+                    </div>
+                    <div style="margin: 10px; width: fit-content">
+                        <strong>Frames:</strong>
+                        <input class="input" type="number" id="frames" style="width:30%; min-width: 50px; margin: 5px;" min=1 max=10>
+                    </div>
                 </div>
+                <button id="submit" type="button" class="btn btn-dark last_button input"
+                    style="margin: 10px; min-width: 80px;">Submit</button>
+            </div>
+            <div style="margin: 10px;">
+                <br>
+                <div id="chartContainer"></div>
+                <table id="table" class="container text-center"></table>
+                <br>
+                <div id="summary" class="d-flex justify-content-around font-weight-bold text-uppercase"> </div>
             </div>
         </div>
 
