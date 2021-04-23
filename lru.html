@@ -16,6 +16,16 @@
         td {
             border: solid;
         }
+        #table {
+            width: 80vw ;
+        }
+        #summary {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
@@ -194,22 +204,32 @@
         </div>
         <div class="divider" style="height: 10vh;"></div>
         <div id="algo">
-            <div class="container" style="width: 85vw; margin-bottom: 10px;">
-                <strong>Reference String:</strong>
-                <input class="input" type="text" style="width: 55%;" id="input">
-                <strong>Frames:</strong> <input class="input" type="number" id="frames" style="width: 10%;" min=1
-                    max=10>
-                <button class="input" id="submit" style="width: 10%;">Submit</button>
-                <div>
-                    <br>
-                    <table id="table" class="container text-center">
-                    </table>
-                    <br>
-                    <div id="summary" class="d-flex justify-content-around font-weight-bold text-uppercase"> </div>
+            <div class="container"
+                style="width: 85vw; height: fit-content; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <div
+                        style="margin: 10px; width: fit-content; display: flex; justify-content: center; align-items: center;">
+                        <strong>Reference String:</strong>
+                        <input class="input" type="text" style="width: 55%; min-width: 225px; margin: 5px;" id="input">
+                    </div>
+                    <div style="margin: 10px; width: fit-content">
+                        <strong>Frames:</strong>
+                        <input class="input" type="number" id="frames" style="width:30%; min-width: 50px; margin: 5px;"
+                            min=1 max=10>
+                    </div>
                 </div>
+                <button id="submit" type="button" class="btn btn-dark last_button input"
+                    style="margin: 10px; min-width: 80px;">Submit</button>
+            </div>
+            <div style="margin: 10px; width: fit-content;">
+                <br>
+                <!-- <div id="chartContainer"></div> -->
+                <table id="table" class="container text-center"></table>
+                <br>
+                <div id="summary" class="d-flex justify-content-around font-weight-bold text-uppercase"> </div>
             </div>
         </div>
-
     </div>
 
     <br>
