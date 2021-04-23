@@ -367,6 +367,10 @@ ul {
 	padding: 0px;
 }
 
+.footercontent > ul > li > a:hover {
+    color: #81C3F1;
+}   
+
 #footerpanel {
 	background-color: #282d32;
 	margin: 10px;

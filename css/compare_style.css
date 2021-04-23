@@ -919,10 +919,6 @@ box-shadow: 0 0 10px black;
           
         }
   
-        
-  
-  
-  
   .footerflex-1 {
           display:flex;
            justify-content: center;
@@ -976,6 +972,11 @@ box-shadow: 0 0 10px black;
     padding: 0px;
     
   }
+
+  .footercontent > ul > li > a:hover {
+    color: #81C3F1;
+  }  
+
   #footerpanel {
       background-color:#282d32;
       margin: 10px;
@@ -987,15 +988,6 @@ box-shadow: 0 0 10px black;
   .footerpanel-heading{
   padding: 0px;
   
-  }
-  
-  .footer-dark .copyright {
-    text-align:center;
-    padding-top:24px;
-    opacity:0.3;
-    font-size:13px;
-    margin-bottom:0;
-    
   }
   
   .footerpanel-group{
