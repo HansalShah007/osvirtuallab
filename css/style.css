@@ -1102,14 +1102,12 @@ box-shadow: 0 0 10px black;
   }
     
   .footer-dark {
-    
       padding:0px 0px;
       width: 100vw;
       color:#f0f9ff;
       background-color:#282d32;
       padding-bottom:20px;
       padding-top:10px;
-     
         }
   
         .footer-dark h4 {
@@ -1142,8 +1140,6 @@ box-shadow: 0 0 10px black;
            justify-content: center;
           align-items: center;
           width: 100%;
-          
-          
         }
   
   .footerrow {
@@ -1180,36 +1176,28 @@ box-shadow: 0 0 10px black;
     overflow: hidden;
     background-color :#282d32;
     margin: 0 px;
-    
-   
   }
   
   
   .footercontent, ul{
     justify-content: center;
     padding: 0px;
-    
   }
+
+  .footercontent > ul > li > a:hover {
+    color: #81C3F1;
+  }   
+
   #footerpanel {
       background-color:#282d32;
       margin: 10px;
       align-items: center;
       border: none;
-  
   }
   
   .footerpanel-heading{
   padding: 0px;
   
-  }
-  
-  .footer-dark .copyright {
-    text-align:center;
-    padding-top:24px;
-    opacity:0.3;
-    font-size:13px;
-    margin-bottom:0;
-    
   }
   
   .footerpanel-group{
