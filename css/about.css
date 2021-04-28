@@ -149,6 +149,9 @@ body {
     margin: 10px;
 }
 
+.txt {
+    font-size: 3rem !important;
+}
 /* Teams */
 
 .container {
@@ -157,6 +160,10 @@ body {
     width: 100vw;
     padding: 20px;
     height: fit-content;
+}
+
+.mt-5 {
+    margin-top: 0px !important;
 }
 
 .row {
@@ -253,6 +260,10 @@ a {
         left: 0px;
         margin-bottom: 0px;
     }
+
+    .txt {
+        font-size: 2.5rem !important;
+    }
 }
 
 @media only screen and (max-width: 578px){
@@ -265,6 +276,10 @@ a {
         width: 58%;
         height: 10vh;
     }  
+
+    .txt {
+        font-size: 2rem !important;
+    }
 }
 
 .card {
