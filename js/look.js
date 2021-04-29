@@ -547,17 +547,6 @@ function execute() {
 }
 run.addEventListener("click", execute);
 
-// window.addEventListener('wheel', (e) => {
-//     if(e.deltaY>0){
-//         if(window.pageYOffset>=50 && window.pageYOffset<652.6666870117188){
-//             window.scrollBy(0, 652.6666870117188 - window.pageYOffset);
-//         }
-//         if(window.pageYOffset>=778.6666870117188 && window.pageYOffset< 1256.6666259765625){
-//             window.scrollBy(0, 1256.6666259765625 - window.pageYOffset);
-//         }
-//     }
-// });
-
 window.addEventListener('wheel', (e) => {
     if (e.deltaY > 0) {
         document.getElementsByClassName('navbar')[0].classList.add('animate__slideOutUp');
